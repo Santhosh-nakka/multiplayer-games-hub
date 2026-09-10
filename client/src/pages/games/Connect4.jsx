@@ -302,14 +302,14 @@ export default function Connect4() {
         </div>
 
         {/* Game Board */}
-        <div style={{
+        <div className="connect4-board" style={{
           background: 'linear-gradient(145deg, #2563eb, #1d4ed8)', // Richer 3D blue
           padding: '20px',
           borderRadius: '20px',
           boxShadow: '0 15px 0 #1e3a8a, 0 25px 40px rgba(0,0,0,0.8), inset 0 2px 10px rgba(255,255,255,0.3)', // Thick 3D edge
           display: 'flex',
           flexDirection: 'column',
-          gap: '12px',
+          gap: 'var(--c4-gap)',
           border: '2px solid #3b82f6',
           transform: 'perspective(800px) rotateX(5deg)', // Slight 3D tilt
           transformStyle: 'preserve-3d'
@@ -317,7 +317,7 @@ export default function Connect4() {
           
           {/* Slider Track */}
           {!winner && (
-            <div style={{ position: 'relative', width: '100%', maxWidth: '527px', height: '65px', marginBottom: '10px' }}>
+            <div style={{ position: 'relative', width: 'calc(7 * var(--c4-cell-size) + 6 * var(--c4-gap))', height: 'var(--c4-cell-size)', marginBottom: '10px' }}>
               
               {/* The visible track line */}
               <div style={{
@@ -332,9 +332,9 @@ export default function Connect4() {
               <div style={{
                 position: 'absolute',
                 top: '0',
-                left: `calc(${sliderCol * (65 + 12)}px)`, // 65px width + 12px gap
-                width: '65px',
-                height: '65px',
+                left: `calc(${sliderCol} * (var(--c4-cell-size) + var(--c4-gap)))`, // 65px width + 12px gap
+                width: 'var(--c4-cell-size)',
+                height: 'var(--c4-cell-size)',
                 borderRadius: '50%',
                 background: currentPlayer === 1 ? 'radial-gradient(circle at 35% 25%, #fca5a5 0%, #ef4444 40%, #7f1d1d 90%)' 
                           : 'radial-gradient(circle at 35% 25%, #fef08a 0%, #eab308 40%, #713f12 90%)',
@@ -382,14 +382,14 @@ export default function Connect4() {
 
           {/* Grid Rows */}
           {board.map((row, rowIndex) => (
-            <div key={rowIndex} style={{ display: 'flex', gap: '12px' }}>
+            <div key={rowIndex} style={{ display: 'flex', gap: 'var(--c4-gap)' }}>
               {row.map((cell, colIndex) => (
                 <div 
                   key={`${rowIndex}-${colIndex}-${cell}`}
                   onClick={() => handleColumnClick(colIndex)}
                   style={{
-                    width: '65px',
-                    height: '65px',
+                    width: 'var(--c4-cell-size)',
+                    height: 'var(--c4-cell-size)',
                     borderRadius: '50%',
                     background: cell === 1 ? 'radial-gradient(circle at 35% 25%, #fca5a5 0%, #ef4444 40%, #7f1d1d 90%)' 
                               : cell === 2 ? 'radial-gradient(circle at 35% 25%, #fef08a 0%, #eab308 40%, #713f12 90%)' 
