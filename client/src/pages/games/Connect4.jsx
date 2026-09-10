@@ -181,7 +181,7 @@ export default function Connect4() {
       flex: 1, 
       display: 'flex', 
       flexDirection: 'column', 
-      padding: '2rem',
+      padding: '1rem',
       background: 'linear-gradient(135deg, #991b1b 0%, #ef4444 50%, #eab308 50%, #854d0e 100%)',
     }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -245,7 +245,7 @@ export default function Connect4() {
         </div>
       </div>
 
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'row', gap: '3rem', alignItems: 'flex-start', justifyContent: 'center', marginTop: '2rem' }}>
+      <div style={{ flex: 1, display: 'flex', flexWrap: 'wrap', gap: '3rem', alignItems: 'flex-start', justifyContent: 'center', marginTop: '2rem' }}>
         
         {/* Left Side: Game Board */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, maxWidth: '600px' }}>
@@ -317,7 +317,7 @@ export default function Connect4() {
           
           {/* Slider Track */}
           {!winner && (
-            <div style={{ position: 'relative', width: '527px', height: '65px', marginBottom: '10px' }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: '527px', height: '65px', marginBottom: '10px' }}>
               
               {/* The visible track line */}
               <div style={{
@@ -446,7 +446,7 @@ export default function Connect4() {
         <div style={{ 
           maxWidth: '380px',
           background: 'linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95))',
-          padding: '2rem',
+          padding: '1rem',
           borderRadius: '24px',
           border: '1px solid rgba(78, 176, 249, 0.3)',
           boxShadow: '0 20px 40px rgba(0,0,0,0.6), inset 0 2px 10px rgba(255,255,255,0.1)',

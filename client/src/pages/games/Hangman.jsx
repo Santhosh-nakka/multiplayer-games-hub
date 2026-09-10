@@ -298,7 +298,7 @@ export default function Hangman() {
         <div className="game-container">
           
           <div style={{ display: 'flex', gap: '4rem', alignItems: 'center' }}>
-            <div style={{ background: '#deb887', padding: '2rem', borderRadius: '1rem', border: '4px solid #8b4513', boxShadow: '4px 4px 0 rgba(0,0,0,0.1)' }}>
+            <div style={{ background: '#deb887', padding: '1rem', borderRadius: '1rem', border: '4px solid #8b4513', boxShadow: '4px 4px 0 rgba(0,0,0,0.1)' }}>
               <HangmanFigure />
             </div>
 

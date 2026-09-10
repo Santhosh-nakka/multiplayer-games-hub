@@ -723,6 +723,25 @@ canvas {
 
 /* Specific Game Fixes for Mobile */
 @media (max-width: 768px) {
+  /* Global Layout Overrides for all games */
+  div[style*="flex-direction: row"] {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+  }
+
+  /* Force side-panels to take full width and sit below */
+  .chess-main, .main-layout {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 1rem !important;
+  }
+  
+  .chess-panel, .instruction-panel {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
   /* Tic Tac Toe Fix */
   .tictactoe-title {
     font-size: 2.5rem !important;

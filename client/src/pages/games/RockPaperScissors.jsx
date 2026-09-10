@@ -229,7 +229,7 @@ export default function RockPaperScissors() {
 
       {/* Round Result Overlay */}
       {gameState === 'reveal' && !gameOver && (
-        <div style={{ position: 'absolute', top: '40%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 30, background: 'rgba(0,0,0,0.8)', padding: '2rem', borderRadius: '16px', textAlign: 'center', border: '4px solid white', animation: 'fadeInDown 0.3s' }}>
+        <div style={{ position: 'absolute', top: '40%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 30, background: 'rgba(0,0,0,0.8)', padding: '1rem', borderRadius: '16px', textAlign: 'center', border: '4px solid white', animation: 'fadeInDown 0.3s' }}>
           <h2 style={{ color: 'white', fontSize: '3rem', margin: '0 0 1rem 0' }}>
             {roundWinner === 'p1' ? 'Player 1 Wins!' : roundWinner === 'p2' ? (isBotEnabled ? 'Bot Wins!' : 'Player 2 Wins!') : 'Draw!'}
           </h2>

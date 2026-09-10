@@ -509,7 +509,7 @@ export default function ChessGame() {
           display: 'flex', justifyContent: 'center', alignItems: 'center'
         }}>
           <div style={{
-            background: '#1e293b', padding: '2rem', borderRadius: '1rem',
+            background: '#1e293b', padding: '1rem', borderRadius: '1rem',
             boxShadow: '0 25px 50px rgba(0,0,0,0.5)', textAlign: 'center'
           }}>
             <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'white' }}>Promote Pawn To:</h2>

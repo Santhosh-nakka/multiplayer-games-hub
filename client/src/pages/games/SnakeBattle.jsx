@@ -447,7 +447,7 @@ export default function SnakeBattle() {
   }, []);
 
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '2rem' }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '1rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

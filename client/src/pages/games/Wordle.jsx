@@ -371,7 +371,7 @@ export default function Wordle() {
           <div style={{width: 100}}></div>
         </header>
 
-        <div className="main-layout" style={{ display: 'flex', flex: 1, justifyContent: 'center', padding: '2rem', gap: '2rem', flexWrap: 'wrap' }}>
+        <div className="main-layout" style={{ display: 'flex', flex: 1, justifyContent: 'center', padding: '1rem', gap: '2rem', flexWrap: 'wrap' }}>
           <div className="instruction-panel" style={{ flex: 1, minWidth: '250px', maxWidth: '300px', color: '#39ff14', border: '1px solid #39ff14', padding: '1.5rem', borderRadius: '8px', height: 'fit-content', boxShadow: '0 0 10px rgba(57,255,20,0.2)' }}>
             <h3 style={{ borderBottom: '1px solid #39ff14', paddingBottom: '0.5rem', marginTop: 0, textShadow: '0 0 5px #39ff14' }}>How to Play</h3>
             <p style={{ lineHeight: '1.5' }}>Guess the Wordle in 6 tries.</p>

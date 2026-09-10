@@ -254,7 +254,7 @@ export default function TicTacToe() {
         <div style={{ 
           maxWidth: '380px',
           background: 'linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95))',
-          padding: '2rem',
+          padding: '1rem',
           borderRadius: '24px',
           border: '1px solid rgba(78, 176, 249, 0.3)',
           boxShadow: '0 20px 40px rgba(0,0,0,0.6), inset 0 2px 10px rgba(255,255,255,0.1)',
