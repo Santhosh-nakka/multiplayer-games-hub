@@ -722,12 +722,19 @@ canvas {
 }
 
 /* Specific Game Fixes for Mobile */
+/* Add desktop default for mobile-stack */
+.mobile-stack {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
 @media (max-width: 768px) {
-  /* Global Layout Overrides for all games */
-  div[style*="flex-direction: row"] {
+  /* Force column layout for anything with mobile-stack */
+  .mobile-stack {
     flex-direction: column !important;
-    flex-wrap: wrap !important;
     align-items: center !important;
+    flex-wrap: nowrap !important;
   }
 
   /* Force side-panels to take full width and sit below */

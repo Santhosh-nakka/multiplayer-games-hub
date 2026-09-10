@@ -158,10 +158,10 @@ export default function TicTacToe() {
         </button>
       </div>
 
-      <div className="tictactoe-content" style={{ flex: 1, display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'flex-start', justifyContent: 'center', marginTop: '1.5rem' }}>
+      <div className="tictactoe-content mobile-stack" style={{ flex: 1, display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'center', marginTop: '1.5rem' }}>
         
         {/* Left Side: Game Board */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, minWidth: '260px', maxWidth: '600px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '600px' }}>
           
           {/* Game Header */}
           <div style={{ 

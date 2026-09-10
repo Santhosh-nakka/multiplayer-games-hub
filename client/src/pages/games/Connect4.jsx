@@ -245,7 +245,7 @@ export default function Connect4() {
         </div>
       </div>
 
-      <div style={{ flex: 1, display: 'flex', flexWrap: 'wrap', gap: '3rem', alignItems: 'flex-start', justifyContent: 'center', marginTop: '2rem' }}>
+      <div className="mobile-stack" style={{ flex: 1, display: 'flex', gap: '3rem', alignItems: 'flex-start', justifyContent: 'center', marginTop: '2rem' }}>
         
         {/* Left Side: Game Board */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, maxWidth: '600px' }}>
