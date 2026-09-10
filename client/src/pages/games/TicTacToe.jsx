@@ -124,7 +124,7 @@ export default function TicTacToe() {
   }, [winner]);
 
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '2rem' }}>
+    <div className="tictactoe-container" style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '1rem' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <button 
           onClick={() => navigate('/hub')}
@@ -134,17 +134,18 @@ export default function TicTacToe() {
         </button>
         <button 
           onClick={() => { setIsBotEnabled(!isBotEnabled); setBoard(Array(9).fill('')); setXIsNext(true); }}
+          className="tictactoe-bot-btn"
           style={{ 
             background: isBotEnabled ? 'rgba(16, 185, 129, 0.15)' : 'rgba(59, 130, 246, 0.15)', 
             border: `2px solid ${isBotEnabled ? '#10b981' : '#3b82f6'}`, 
             color: isBotEnabled ? '#34d399' : '#60a5fa', 
-            padding: '0.75rem 1.5rem', 
+            padding: '0.5rem 1rem', 
             borderRadius: '12px', 
             cursor: 'pointer', 
             display: 'flex', 
             alignItems: 'center', 
-            gap: '0.75rem',
-            fontSize: '1.2rem',
+            gap: '0.5rem',
+            fontSize: '1rem',
             fontWeight: 'bold',
             boxShadow: `0 0 15px ${isBotEnabled ? 'rgba(16, 185, 129, 0.3)' : 'rgba(59, 130, 246, 0.3)'}`,
             transition: 'all 0.3s ease'
@@ -152,15 +153,15 @@ export default function TicTacToe() {
           onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
           onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
-          {isBotEnabled ? <Bot size={24} /> : <User size={24} />}
-          {isBotEnabled ? 'Playing vs Bot' : '2 Player (Local)'}
+          {isBotEnabled ? <Bot size={20} /> : <User size={20} />}
+          <span className="hide-on-mobile">{isBotEnabled ? 'Playing vs Bot' : '2 Player (Local)'}</span>
         </button>
       </div>
 
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'row', gap: '3rem', alignItems: 'flex-start', justifyContent: 'center', marginTop: '2rem' }}>
+      <div className="tictactoe-content" style={{ flex: 1, display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'flex-start', justifyContent: 'center', marginTop: '1.5rem' }}>
         
         {/* Left Side: Game Board */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, maxWidth: '600px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1, minWidth: '260px', maxWidth: '600px' }}>
           
           {/* Game Header */}
           <div style={{ 
@@ -174,7 +175,7 @@ export default function TicTacToe() {
             backdropFilter: 'blur(4px)',
             width: '100%'
           }}>
-            <h2 className="text-perfect-style" style={{ fontSize: '4rem', margin: 0, paddingBottom: '0.5rem' }}>Tic-Tac-Toe</h2>
+            <h2 className="text-perfect-style tictactoe-title" style={{ margin: 0, paddingBottom: '0.5rem' }}>Tic-Tac-Toe</h2>
             
             {!winner ? (
               <div style={{ 
@@ -215,8 +216,6 @@ export default function TicTacToe() {
 
           {/* Game Board */}
           <div className="board-3d" style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(3, 120px)', 
             margin: '0 auto'
           }}>
             {board.map((cell, index) => (
@@ -226,8 +225,6 @@ export default function TicTacToe() {
                 onClick={() => handleCellClick(index)}
                 disabled={!!winner || cell !== ''}
                 style={{
-                  width: '120px',
-                  height: '120px',
                   border: 'none',
                   cursor: (cell === '' && !winner) ? 'pointer' : 'default',
                   transition: 'transform 0.1s ease',

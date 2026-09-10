@@ -283,8 +283,14 @@ h1, h2, h3, h4, h5, h6 {
   filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
 }
 
+.tictactoe-title {
+  font-size: 4rem;
+}
+
 /* 3D Tic-Tac-Toe Styles */
 .board-3d {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
   background: #509eed;
   border-radius: 24px;
   padding: 12px;
@@ -296,6 +302,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cell-3d {
+  width: 120px;
+  height: 120px;
   background: #c0d6e4;
   border-radius: 12px;
   box-shadow: 
@@ -715,6 +723,36 @@ canvas {
 
 /* Specific Game Fixes for Mobile */
 @media (max-width: 768px) {
+  /* Tic Tac Toe Fix */
+  .tictactoe-title {
+    font-size: 2.5rem !important;
+  }
+  .board-3d {
+    grid-template-columns: repeat(3, 85px) !important;
+    gap: 8px !important;
+    padding: 10px !important;
+  }
+  .cell-3d {
+    width: 85px !important;
+    height: 85px !important;
+  }
+  .piece-o-3d {
+    width: 50px !important;
+    height: 50px !important;
+    border-width: 14px !important;
+  }
+  .piece-x-3d::before,
+  .piece-x-3d::after {
+    height: 16px !important;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .tictactoe-bot-btn {
+    padding: 0.75rem !important;
+    border-radius: 12px !important;
+  }
+
   /* Ping Pong Scale */
   .scene-container {
     transform: scale(0.6);
