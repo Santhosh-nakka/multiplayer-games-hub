@@ -140,7 +140,7 @@ export default function RockPaperScissors() {
       <h1 className="rps-title">Rock Paper Scissor</h1>
 
       {/* Top Bar */}
-      <div style={{ position: 'absolute', top: '20px', left: '20px', right: '20px', display: 'flex', justifyContent: 'space-between', zIndex: 20 }}>
+      <div className="rps-top-bar" style={{ position: 'absolute', top: '20px', left: '20px', right: '20px', display: 'flex', justifyContent: 'space-between', zIndex: 20 }}>
         <button 
           onClick={() => navigate('/hub')}
           style={{ background: 'rgba(0,0,0,0.5)', border: 'none', color: 'white', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '1.2rem', padding: '0.5rem 1rem', borderRadius: '8px' }}
@@ -213,17 +213,17 @@ export default function RockPaperScissors() {
       {/* Hands */}
       <div className={`rps-hand-container rps-hand-left ${gameState !== 'idle' ? 'visible' : ''} ${gameState === 'shaking' ? 'rps-shaking-left' : ''}`}>
         {gameState === 'reveal' ? (
-          React.createElement(MOVES[player1Move]?.Component, { style: { width: '400px', height: '240px' } })
+          React.createElement(MOVES[player1Move]?.Component, { className: "rps-hand-svg" })
         ) : (
-          <HandRock style={{ width: '400px', height: '240px' }} />
+          <HandRock className="rps-hand-svg" />
         )}
       </div>
 
       <div className={`rps-hand-container rps-hand-right ${gameState !== 'idle' ? 'visible' : ''} ${gameState === 'shaking' ? 'rps-shaking-right' : ''}`}>
         {gameState === 'reveal' ? (
-          React.createElement(MOVES[player2Move]?.Component, { style: { width: '400px', height: '240px' } })
+          React.createElement(MOVES[player2Move]?.Component, { className: "rps-hand-svg" })
         ) : (
-          <HandRock style={{ width: '400px', height: '240px' }} />
+          <HandRock className="rps-hand-svg" />
         )}
       </div>
 

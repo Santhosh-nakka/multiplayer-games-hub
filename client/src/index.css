@@ -803,15 +803,51 @@ canvas {
     gap: 1rem;
   }
 
+  .rps-top-bar {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 10px;
+    top: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+  }
+  
+  .rps-top-bar > button, .rps-top-bar > div {
+    font-size: 0.9rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+
+  .rps-title {
+    top: 90px !important;
+    font-size: 1.8rem !important;
+  }
+
+  .rps-hand-svg {
+    width: 200px !important;
+    height: 120px !important;
+  }
+
+  .rps-hand-left.visible {
+    left: -20px !important;
+  }
+
+  .rps-hand-right.visible {
+    right: -20px !important;
+  }
+
   .rps-btn {
-    font-size: 1.5rem !important;
-    padding: 10px !important;
+    font-size: 1.2rem !important;
+    padding: 8px !important;
   }
 
-  .rps-hand-container {
-    font-size: 80px !important;
+  .rps-controls, .rps-controls-side {
+    bottom: 20px !important;
+    gap: 10px !important;
   }
 
+  .rps-controls-side {
+    width: 48% !important;
+  }
   .score-text {
     font-size: 3rem !important;
   }
